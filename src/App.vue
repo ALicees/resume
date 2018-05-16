@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
+    <div id="app"></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+// import HelloWorld from './components/HelloWorld'
+import HelloWorld from './components/Footer'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    
+  },
+  data(){
+    return {
+      code:'xx'
+    }
+  },
+  created(){
+    var n=0
+    setInterval(()=>{
+      this.code=n
+      n+=1
+    },1000)
   }
 }
 </script>
